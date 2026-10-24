@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Nuestra Boda</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#fdf6f0;
+    padding:30px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+h1{
+    color:#b76e79;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#b76e79;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>¡Nos Casamos! ❤️</h1>
+
+<h2 id="nombre"></h2>
+
+<p>
+Nos encantaría que nos acompañaras en este día tan especial.
+</p>
+
+<video width="100%" controls>
+  video.mp4
+</video>
+
+<br><br>
+
+#
+Confirmar asistencia
+</a>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const nombre = params.get('nombre') || 'Invitado Especial';
+
+document.getElementById('nombre').innerText =
+`Hola ${nombre}`;
+
+const formsLink =
+"https://forms.office.com/r/TU_FORM";
+
+document.getElementById('confirmar').href =
+formsLink;
+
+</script>
+
+</body>
+</html>
